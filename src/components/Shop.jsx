@@ -1,44 +1,40 @@
 import React from 'react'
 
 import Keyboard from '../assets/keyboard.png'
+import Arrow from './Arrow'
 
 const Shop = () => {
   return (
-    <div id='Shop' className='h-full bg-black'>
-<div>
-    <div className='text-white text-center text-3xl font-thin'>
-        <h1>“First say to yourself what you would be, and then do what you have to do.”</h1>
-        <h3>- Epictetus</h3>
+    <div id='Shop' className='h-screen sbg flex flex-col items-center justify-center'>
+<div className=''>
+    <div className='text-white text-center text-5xl mt-10'>
+        <h1 className='font-thin'>“First say to yourself what you would be, 
+        <br />
+        and then do what you have to do.”</h1>
+        <h3 className='italic'>- Epictetus</h3>
     </div>
-<div class="min-w-screen min-h-screen bg-black flex items-center p-5 lg:p-10 overflow-hidden relative">
-    <div class="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
-        <div class="md:flex items-center -mx-10">
-            <div class="w-full md:w-1/2 px-10 mb-10 md:mb-0">
-                <div class="relative">
-                    <img src="https://pngimg.com/uploads/raincoat/raincoat_PNG53.png" class="w-full relative z-10" alt=""/>
-                    <div class="border-4 border-yellow-200 absolute top-10 bottom-10 left-10 right-10 z-0"></div>
-                </div>
+    <div class="flex flex-row items-center justify-center text-white my-20">
+        <div className='w-1/2'>
+            <img src={Keyboard} alt="" />
+        </div>
+        <div className='w-1/2 flex flex-col items-center justify-center'>
+            <h1 className='text-5xl font-bold my-5'>STOICKEY <span className='italic'>ZENO</span></h1>
+            <div className='my-5 text-lg'>
+                <ul>
+                    <li>Gateron low profile brown / red switches</li>
+                    <li>Sturdy aluminium case</li>
+                    <li>Low Profile, Minimal Footprint</li>
+                    <li>65% Layout</li>
+                    <li>Low Profile double shot PBT keycaps</li>
+                </ul>
             </div>
-            <div class="w-full md:w-1/2 px-10">
-                <div class="mb-10">
-                    <h1 class="font-bold uppercase text-2xl mb-5">Mens's Ragged <br/>Waterproof Jacket</h1>
-                    <p class="text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Eos, voluptatum dolorum! Laborum blanditiis consequatur, voluptates, sint enim fugiat saepe, dolor fugit, magnam explicabo eaque quas id quo porro dolorum facilis... <a href="#" class="opacity-50 text-gray-900 hover:opacity-100 inline-block text-xs leading-none border-b border-gray-900">MORE <i class="mdi mdi-arrow-right"></i></a></p>
-                </div>
-                <div>
-                    <div class="inline-block align-bottom mr-5">
-                        <span class="text-2xl leading-none align-baseline">$</span>
-                        <span class="font-bold text-5xl leading-none align-baseline">59</span>
-                        <span class="text-2xl leading-none align-baseline">.99</span>
-                    </div>
-                    <div class="inline-block align-bottom">
-                        <button class="bg-yellow-300 opacity-75 hover:opacity-100 text-yellow-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold"><i class="mdi mdi-cart -ml-2 mr-2"></i> BUY NOW</button>
-                    </div>
-                </div>
+            <div className='my-5'>
+            <span className='text-3xl mr-10'>$89.99</span>
+            <a href="" className='text-2xl border-2 border-white px-5 py-1 my-5 rounded-xl m-auto'>ORDER NOW</a>
             </div>
         </div>
     </div>
-</div>    
-        </div>
+    </div>
     </div>
   )
 }

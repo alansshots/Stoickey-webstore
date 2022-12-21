@@ -1,1 +1,7 @@
-
+.sbg{
+    background-color: #000000;
+    opacity: 0.92;
+    background-image:  radial-gradient(#202020 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#202020 0.8500000000000001px, #000000 0.8500000000000001px);
+    background-size: 34px 34px;
+    background-position: 0 0,17px 17px;
+}
