@@ -9,7 +9,7 @@ const Gallery = () => {
   return (
     <div id='Gallery flex flex-col justify-center items-center'>
         <div>
-        <div className='text-6xl md:text-[8rem] lg:text-[6rem] flex flex-row items-center justify-around text-left mt-36'>
+        <div className='text-6xl md:text-[6rem] lg:text-[6rem] flex flex-row items-center justify-around text-left mt-36'>
             <h2 className='font-bold'>
                 IT'S Sooo
                 <br />
@@ -18,7 +18,7 @@ const Gallery = () => {
             <img src="" alt="" />
         </div>
 
-        <div class="mt-36 mb-36">
+        <div class="mt-36 mb-64">
                 <div class=" space-y-4">
                     <div class="flex items-end justify-center space-x-4 justify-center">
                         <img class="w-32 rounded-lg shadow-lg md:w-3/12" width="200" src={GalleryFirst}  alt="1"/>

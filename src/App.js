@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import Gallery from './components/Gallery';
 import Timeline from './components/Timeline';
+import Shop from './components/Shop';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
      <Banner/>
      <Gallery/>
      <Timeline/>
+     <Shop/>
     </div>  
   );
 }
