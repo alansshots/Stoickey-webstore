@@ -4,6 +4,7 @@ import Banner from './components/Banner';
 import Gallery from './components/Gallery';
 import Timeline from './components/Timeline';
 import Shop from './components/Shop';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
      <Gallery/>
      <Timeline/>
      <Shop/>
+     <Footer/>
     </div>  
   );
 }
