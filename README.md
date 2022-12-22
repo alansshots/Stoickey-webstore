@@ -1,11 +1,19 @@
-# Getting Started with Create React App
+#STOICKEY is a keyboard company orientated towards producing and bringiig the mechanical keyboards market a low-profile, sturdy and premium mechanical feeling keyboard. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#The Web store was build using:
+-> React.js
+-> TaiwindCSS
+-> FramerMotion
+-> Stripe
 
-## Available Scripts
 
-In the project directory, you can run:
+##Get started
 
+1) Cloning the project.
+-> To get started simply clone the repository to your machine. this can be done by running the following comand in your terminal:
+### `git clone "repository link" `
+
+2) To run the project type the following in your terminal:
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -19,6 +27,7 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+3) To build your project for production:
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -28,6 +37,8 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+##Extra
 
 ### `npm run eject`
 
