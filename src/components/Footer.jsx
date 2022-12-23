@@ -1,13 +1,15 @@
 import React from 'react'
+import { Link } from "react-scroll";
+
 import ArrowUp from './ArrowUp'
 
 const Footer = () => {
   return (
     <div id='Footer'>
         <div className='flex flex-col items-start justify-start mx-10 mt-10'>
-            <a href=""><h1 className='text-[10rem] font-bold hover:opacity-50 transition-5'>INSTAGRAM</h1></a>
-            <a href=""><h1 className='text-[10rem] font-bold hover:opacity-50 transition-5'>TIK TOK</h1></a>
-            <a href=""><h1 className='text-[10rem] font-bold hover:opacity-50 transition-5'>TWITTER</h1></a>
+            <a href=""><h1 className='text-[7rem] font-bold hover:opacity-50 transition-5'>INSTAGRAM</h1></a>
+            <a href=""><h1 className='text-[7rem] font-bold hover:opacity-50 transition-5'>TIK TOK</h1></a>
+            <a href=""><h1 className='text-[7rem] font-bold hover:opacity-50 transition-5'>TWITTER</h1></a>
         </div>
         <div className='flex flex-row items-start justify-start'>
             <div className='mx-10 my-10'>
@@ -29,10 +31,10 @@ const Footer = () => {
                 <div>
                     <label className='text-xl'>Email*</label>
                     <div>
-                        <input type="text" className='border-botom-2 border-black my-2' placeholder='email...'/>
-                        <a href="" className='text-xl border-2 border-black px-5 py-1 my-5 rounded-xl mx-5'>SUBSCRIBE</a>
+                        <input type="text" className='border-b-2 border-black outline-none my-2' placeholder='example@...'/>
+                        <a href="" className='text-md border-2 border-black px-5 py-1 my-5 rounded-xl mx-5'>SUBSCRIBE</a>
                     </div>
-                    <p className='font-bold'>Thank you for subscribing.</p>
+                    <p className='font-bold my-4'>Thank you for subscribing.</p>
                 </div>
             </div>
             <div>   
@@ -44,7 +46,15 @@ const Footer = () => {
                 <br />
                 PASSION BY STOICKEY 
             </h1>
-            <a href='Navbar'><ArrowUp/></a>
+            <Link className='cursor-pointer'
+                activeClass="active"
+                to="Navbar"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}>
+                <ArrowUp/>
+            </Link>
         </div>
     </div>
   )

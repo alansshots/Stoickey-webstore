@@ -1,4 +1,6 @@
 import React from 'react'
+import { motion } from "framer-motion"
+import Typical from 'react-typical'
 
 import Arrow from './Arrow'
 import GalleryFirst from '../assets/gallery(1).jpg'
@@ -11,17 +13,21 @@ const Gallery = () => {
         <div>
         <div className='text-6xl md:text-[6rem] lg:text-[6rem] flex flex-row items-center justify-around text-left mt-36'>
             <h2 className='font-bold'>
-                IT'S Sooo
+                IT'S SOoo
                 <br />
-               <span className='italic'>GOOD</span>
+               <span className='italic'>
+               MARVELOUS
+               </span>
             </h2>
             <img src="" alt="" />
         </div>
 
-        <div class="mt-36 mb-64">
+        <div class="mt-36 mb-48">
                 <div class=" space-y-4">
                     <div class="flex items-end justify-center space-x-4 justify-center">
-                        <img class="w-32 rounded-lg shadow-lg md:w-3/12" width="200" src={GalleryFirst}  alt="1"/>
+                        <motion.img 
+                        
+                        class="w-32 rounded-lg shadow-lg md:w-3/12" width="200" src={GalleryFirst}  alt="1"/>
                         <img class="w-40 rounded-lg shadow-lg md:w-4/12" width="260" src={GallerySecond} alt="2"/>
                     </div>
                     <div class="flex items-start justify-center ml-10 space-x-4 space-x-">

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { motion } from "framer-motion"
+
 import Arrow from './Arrow'
 import Keyboard from '../assets/keyboard.png'
 
@@ -24,7 +26,8 @@ const Banner = () => {
             </h2>
         </div>
         <div className='flex flex-row items-center justify-end mt-20'>
-            <img src={Keyboard} alt="keyboard" />
+            <motion.img
+            src={Keyboard} alt="keyboard" />
         </div>
         </div>
     </div>
