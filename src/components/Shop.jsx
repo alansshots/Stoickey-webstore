@@ -9,14 +9,14 @@ const Shop = () => {
   return (
     <div id='Shop' className='sbg flex flex-col items-center justify-center'>
 <div className=''>
-    <div className='text-white text-center text-5xl mt-10'>
+    <div className='text-white text-center text-5xl sm:text-5xl mt-10'>
         <h1 className='font-thin'>“First say to yourself what you would be, 
         <br />
         and then do what you have to do.”</h1>
         <h3 className='italic'>- Epictetus</h3>
     </div>
-    <div class="flex flex-row items-center justify-center text-white my-10">
-        <div className='w-1/2 ml-10'>
+    <div class="flex flex-col sm:flex-row items-center justify-center text-white my-10">
+        <div className='sm:w-1/2 sm:ml-10'>
             <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
   <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
     <button
@@ -83,7 +83,7 @@ const Shop = () => {
   </button>
 </div>
         </div>
-        <div className='w-1/2 flex flex-col items-center justify-center'>
+        <div className='mt-5 sm:mt-0 sm:w-1/2 flex flex-col items-center justify-center'>
             <h1 className='text-5xl font-bold my-5'>STOICKEY <span className='italic'>ZENO</span></h1>
             <div className='my-5 text-lg'>
                 <ul>

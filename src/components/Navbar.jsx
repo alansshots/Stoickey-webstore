@@ -30,7 +30,7 @@ const Navbar = () => {
             TIMELINE
             </motion.a>
         </Link>
-        <Link className='cursor-pointer'
+        {/* <Link className='cursor-pointer'
         activeClass="active"
         to="Story"
         spy={true}
@@ -47,7 +47,7 @@ const Navbar = () => {
             className='border-2 border-black rounded-xl px-6 m-1 text-xl bg-white hover:bg-black hover:text-white duration-200'>
             STORY
             </motion.a>
-        </Link>
+        </Link> */}
            
         <Link className='cursor-pointer'
         activeClass="active"
