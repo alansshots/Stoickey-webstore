@@ -1,12 +1,148 @@
 import React from 'react'
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
+import { useState } from 'react';
 import 'tw-elements';
 
 import Keyboard from '../assets/keyboard.png'
 import Arrow from './Arrow'
 
 const Shop = () => {
+
+  const [isShown, setIsShown] = useState(false);
+
+  const handleClick = event => {
+    // 👇️ or simply set it to true
+    setIsShown(current => !current);
+  };
+
   return (
+    <>
+    {/* Shoping cart modal */}
+    <AnimatePresence>
+    {isShown && (
+         <motion.div 
+         initial={{
+          opacity:0,
+         }}
+         animate={{
+          opacity:1,
+         }}
+         exit={{
+          opacity:0,
+          transition:{
+            duration:0.3,
+            ease: "easeInOut"
+          }
+         }}
+         transition={{
+          duration:0.2,
+          ease: "easeInOut"
+         }}
+         className="relative z-10 shoping-cart" aria-labelledby="slide-over-title" role="dialog">
+         <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+       
+         <div className="fixed inset-0 overflow-hidden">
+           <div className="absolute inset-0 overflow-hidden">
+             <motion.div
+             key='box'
+             initial={{
+              x:500
+             }}
+             animate={{
+              x:0
+             }}
+             exit={{
+              x:500,
+              transition:{
+                duration:0.4
+               }
+             }}
+             transition={{
+              duration:0.4
+             }}
+             className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+               <div className="pointer-events-auto w-screen max-w-md">
+                 <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                   <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
+                     <div className="flex items-start justify-between">
+                       <h2 className="text-xl font-bold uppercase text-black" id="slide-over-title">Shopping cart</h2>
+                       <div className="ml-3 flex h-7 items-center">
+                         <button onClick={handleClick}  type="button" className="-m-2 p-2 text-black font-bold hover:scale-95 hover:text-gray-500">
+                           <span className="sr-only">Close panel</span>
+                           {/* <!-- Heroicon name: outline/x-mark --> */}
+                           <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                           </svg>
+                         </button>
+                       </div>
+                     </div>
+       
+                     <div className="mt-8">
+                       <div className="flow-root">
+                         <ul role="list" className="-my-6 divide-y divide-gray-200">
+                           <li className="flex py-6">
+                             <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                               <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." className="h-full w-full object-cover object-center"/>
+                             </div>
+       
+                             <div className="ml-4 flex flex-1 flex-col">
+                               <div>
+                                 <div className="flex justify-between text-base font-medium text-gray-900">
+                                   <h3 className='font-bold'>
+                                     Throwback Hip Bag
+                                   </h3>
+                                   <p className="ml-4 font-bold">$89.99</p>
+                                 </div>
+                                 <p className="mt-1 text-sm text-gray-500">STOICKEY</p>
+                               </div>
+                               <div className="flex flex-1 items-end justify-between text-sm">
+                                 <p className="text-gray-500">Qty: 1</p>
+       
+                                 <div className="flex">
+                                   <button type="button" className="font-medium text-red-800 hover:text-red-700 hover:scale-95 duration-200">Remove</button>
+                                 </div>
+                               </div>
+                             </div>
+                           </li>
+       
+                           {/* <!-- More products... --> */}
+                         </ul>
+                       </div>
+                     </div>
+                   </div>
+       
+                   <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
+                     <div className="flex justify-between text-base font-medium text-black">
+                       <p className='font-bold text-md uppercase'>Subtotal</p>
+                       <p className='font-bold'>$89.99</p>
+                     </div>
+                     <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                     <div className="mt-6">
+                       <a href="#" className="flex items-center justify-center rounded-md border-2 border-black bg-white px-6 py-3 text-lg uppercase text-black font-bold text-white shadow-sm hover:bg-black hover:text-white hover:scale-95 duration-200">Checkout</a>
+                     </div>
+                     {/* <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+                       <p>
+                         or
+                         <button type="button" className="ml-2 font-medium text-indigo-600 hover:text-indigo-500">
+                           Continue Shopping
+                           <span aria-hidden="true"> &rarr;</span>
+                         </button>
+                       </p>
+                     </div> */}
+                   </div>
+                 </div>
+               </div>
+             </motion.div>
+           </div>
+         </div>
+       </motion.div>
+      )}
+      </AnimatePresence>
+
+      {/* 👇️ show component on click */}
+      {isShown}
+
+    {/* Shop section */}
     <div id='Shop' className='sbg flex flex-col items-center justify-center'>
 <div className=''>
     <div className='text-white text-center text-5xl sm:text-5xl mt-10'>
@@ -96,21 +232,22 @@ const Shop = () => {
             </div>
             <div className='my-5'>
             <span className='text-3xl mr-10'>$89.99</span>
-            <motion.a
+            <motion.button onClick={handleClick}
             whileHover={{
               scale: 1.05,
               transition: { duration: 0.1 },
             }}
             whileTap={{ scale: 0.9 }}
             whileInView={{ opacity: 1 }}
-            className='border-2 border-white rounded-xl px-6 py-1 m-1 text-xl hover:bg-black hover:text-white duration-200'>
+            className='border-2 border-white rounded-xl px-6 py-1 m-1 text-xl cursor-pointer hover:bg-black hover:text-white duration-200'>
             ORDER NOW
-            </motion.a>
+            </motion.button>
             </div>
         </div>
     </div>
     </div>
     </div>
+    </>
   )
 }
 

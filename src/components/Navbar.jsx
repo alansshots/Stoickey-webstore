@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { Link } from "react-scroll"
 
 import Logo from '../assets/logo.png'
+import Bag from './Bag'
 
 const Navbar = () => {
   return (
@@ -67,7 +68,11 @@ const Navbar = () => {
             PURCHASE
             </motion.a>
         </Link>
-        
+
+        {/* <Link className='border-l-2 border-black ml-2 p-2 cursor-pointer '>
+          <Bag/>
+        </Link> */}
+
         </div>
     </div>
   )

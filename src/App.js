@@ -1,4 +1,6 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import Gallery from './components/Gallery';
@@ -15,6 +17,13 @@ function App() {
      <Timeline/>
      <Shop/>
      <Footer/>
+
+     {/* Routs */}
+     {/* <BrowserRouter>
+        <Routes>
+          <Route path='shoping-cart' element={<ShopingCart/>} />
+        </Routes>
+     </BrowserRouter> */}
     </div>  
   );
 }
