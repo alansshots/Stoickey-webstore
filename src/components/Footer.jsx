@@ -1,9 +1,18 @@
 import React from 'react'
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from "react-scroll";
 
 import ArrowUp from './ArrowUp'
 
 const Footer = () => {
+
+  const [show, setShown] = useState(false);
+
+  const handleClick = () => {
+    setShown(current => !current);
+  };
+
   return (
     <div id='Footer'>
         <div className='flex flex-col items-start justify-start mx-10 mt-10'>
@@ -32,18 +41,55 @@ const Footer = () => {
                     <label className='text-xl'>Email*</label>
                     <div>
                         <input type="text" className='border-b-2 border-black outline-none my-2' placeholder='example@...'/>
-                        <a href="" className='text-md border-2 border-black px-5 py-1 my-5 rounded-xl mx-5'>SUBSCRIBE</a>
+                        <button onClick={handleClick} className='text-md border-2 border-black px-5 py-1 my-5 rounded-xl mx-5 hover:scale-95 hover:bg-black hover:text-white duration-200'>SUBSCRIBE</button>
                     </div>
-                    <p className='font-bold my-4'>Thank you for subscribing.</p>
+                    <AnimatePresence>
+                    {show && (
+                        <>
+                        <motion.p 
+                         initial={{
+                            y:0,
+                            opacity:0
+                         }}
+                         animate={{
+                            y:1,
+                            opacity:1
+                         }}
+                         transition={{
+                            duration: 1,
+                            repeat: 1,
+                            repeatType: "reverse",
+                         }}
+                        className='font-bold absolute my-2 text-sm'>Thank you for subscribing!</motion.p>
+
+                        <motion.p 
+                         initial={{
+                            y:0,
+                            opacity:0
+                         }}
+                         animate={{
+                            y:1,
+                            opacity:1
+                         }}
+                         transition={{
+                            delay: 2,
+                            duration: 2,
+                            repeat: 1,
+                            repeatType: "reverse",
+                         }}
+                        className='font-bold absolute my-2 text-sm'>We secretly have a crush you &lt;3!</motion.p>
+                        </>
+                    )}
+                    </AnimatePresence>
+                    {show}
                 </div>
             </div>
             <div>   
             </div>
         </div>
         <div className='my-10 mx-10 flex flex-row items-center justify-between'>
-            <h1 className='text-3xl font-bold'>
+            <h1 className='text-2xl sm:text-3xl w-5/12 font-bold'>
                 &copy; 2023 MADE WITH LOVE AND 
-                <br />
                 PASSION BY STOICKEY 
             </h1>
             <Link className='cursor-pointer'

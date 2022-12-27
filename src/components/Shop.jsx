@@ -11,9 +11,16 @@ const Shop = () => {
   const [isShown, setIsShown] = useState(false);
 
   const handleClick = event => {
-    // 👇️ or simply set it to true
     setIsShown(current => !current);
   };
+
+  // const [itemsCount, setItemsCount] = useState()
+
+  // const handleCount = (number) => {
+  //    setItemsCount(number + 1);
+
+  //    console.log(itemsCount);
+  //  };
 
   return (
     <>
@@ -91,16 +98,18 @@ const Shop = () => {
                                    <h3 className='font-bold'>
                                      Throwback Hip Bag
                                    </h3>
-                                   <p className="ml-4 font-bold">$89.99</p>
+                                   <p className="ml-4 font-bold">$24.99</p>
                                  </div>
                                  <p className="mt-1 text-sm text-gray-500">STOICKEY</p>
                                </div>
                                <div className="flex flex-1 items-end justify-between text-sm">
-                                 <p className="text-gray-500">Qty: 1</p>
+                                 {/* <p className="text-gray-500">Qty:
+                                 <input type="number" min="0" className='ml-1 w-8 outline-none' />
+                                 </p> */}
        
-                                 <div className="flex">
+                                 {/* <div className="flex">
                                    <button type="button" className="font-medium text-red-800 hover:text-red-700 hover:scale-95 duration-200">Remove</button>
-                                 </div>
+                                 </div> */}
                                </div>
                              </div>
                            </li>
@@ -118,7 +127,7 @@ const Shop = () => {
                      </div>
                      <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                      <div className="mt-6">
-                       <a href="#" className="flex items-center justify-center rounded-md border-2 border-black bg-white px-6 py-3 text-lg uppercase text-black font-bold text-white shadow-sm hover:bg-black hover:text-white hover:scale-95 duration-200">Checkout</a>
+                       <a href='https://buy.stripe.com/test_dR6aHr4bP5KmaqIeUU' className="flex items-center justify-center rounded-md border-2 border-black bg-white px-6 py-3 text-lg uppercase text-black font-bold text-white shadow-sm hover:bg-black hover:text-white hover:scale-95 duration-200">Checkout</a>
                      </div>
                      {/* <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                        <p>
@@ -145,9 +154,8 @@ const Shop = () => {
     {/* Shop section */}
     <div id='Shop' className='sbg flex flex-col items-center justify-center'>
 <div className=''>
-    <div className='text-white text-center text-5xl sm:text-5xl mt-10'>
+    <div className='text-white text-center text-2xl sm:text-5xl mt-10 w-3/4 m-auto'>
         <h1 className='font-thin'>“First say to yourself what you would be, 
-        <br />
         and then do what you have to do.”</h1>
         <h3 className='italic'>- Epictetus</h3>
     </div>
@@ -220,7 +228,7 @@ const Shop = () => {
 </div>
         </div>
         <div className='mt-5 sm:mt-0 sm:w-1/2 flex flex-col items-center justify-center'>
-            <h1 className='text-5xl font-bold my-5'>STOICKEY <span className='italic'>ZENO</span></h1>
+            <h1 className='text-3xl sm:text-5xl font-bold my-5 text-center'>STOICKEY <span className='italic'>ZENO</span></h1>
             <div className='my-5 text-lg'>
                 <ul>
                     <li>Gateron low profile brown / red switches</li>
@@ -231,7 +239,7 @@ const Shop = () => {
                 </ul>
             </div>
             <div className='my-5'>
-            <span className='text-3xl mr-10'>$89.99</span>
+            <span className='text-2xl sm:text-3xl mr-10'>$24.99</span>
             <motion.button onClick={handleClick}
             whileHover={{
               scale: 1.05,
@@ -239,7 +247,7 @@ const Shop = () => {
             }}
             whileTap={{ scale: 0.9 }}
             whileInView={{ opacity: 1 }}
-            className='border-2 border-white rounded-xl px-6 py-1 m-1 text-xl cursor-pointer hover:bg-black hover:text-white duration-200'>
+            className='border-2 border-white rounded-xl px-6 py-1 m-1 text-md sm:text-xl cursor-pointer hover:bg-black hover:text-white duration-200'>
             ORDER NOW
             </motion.button>
             </div>

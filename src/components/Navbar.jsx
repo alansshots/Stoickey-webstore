@@ -7,10 +7,10 @@ import Bag from './Bag'
 
 const Navbar = () => {
   return (
-    <div id='Navbar' className='py-10 flex flex-row justify-between items-center mx-20 bg-transperant'>
+    <div id='Navbar' className='py-10 flex flex-col sm:flex-row justify-between items-center mx-20 bg-transperant'>
         <div>
             {/* <h6 className='text-3xl'>@stoickey</h6> */}
-            <img src={Logo} alt="" className='w-56' />
+            <img src={Logo} alt="stoickey logo" className='w-56 mb-5 sm:mb-0' />
         </div>
         <div className='flex flex-row justify-around items-center'>
         <Link className='cursor-pointer'

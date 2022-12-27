@@ -11,7 +11,7 @@ const Gallery = () => {
   return (
     <div id='Gallery flex flex-col justify-center items-center'>
         <div>
-        <div className='text-6xl md:text-[6rem] lg:text-[6rem] flex flex-row items-center justify-around text-left mt-36'>
+        <div className='text-5xl md:text-[6rem] lg:text-[6rem] flex flex-row items-center justify-around text-left mt-36'>
             <h2 className='font-bold'>
                 IT'S SOoo
                 <br />
