@@ -20,7 +20,7 @@ const Footer = () => {
             <a href=""><h1 className='text-5xl my-5 sm:my-0 sm:text-[7rem] font-bold hover:opacity-50 transition-5'>TIK TOK</h1></a>
             <a href=""><h1 className='text-5xl sm:text-[7rem] font-bold hover:opacity-50 transition-5'>TWITTER</h1></a>
         </div>
-        <div className='flex flex-col sm:flex-row items-start justify-start'>
+        <div className='flex flex-col sm:flex-row sm:items-start sm:justify-start'>
             <div className='mx-10 my-5 sm:my-10'>
                 <h2 className='text-3xl underline my-5'>LOCATION</h2>
                 <p className='text-xl'>Luissenstasse 23 Aachen, Germany</p>
@@ -88,7 +88,7 @@ const Footer = () => {
             </div>
         </div>
         <div className='my-10 mx-10 flex flex-row items-center justify-between'>
-            <h1 className='text-2xl sm:text-3xl w-5/12 font-bold'>
+            <h1 className='text-md sm:text-3xl sm:w-5/12 font-bold'>
                 &copy; 2023 MADE WITH LOVE AND 
                 PASSION BY STOICKEY 
             </h1>
