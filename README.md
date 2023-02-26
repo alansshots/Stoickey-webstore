@@ -1,4 +1,4 @@
-#STOICKEY is a keyboard company orientated towards producing and bringiig the mechanical keyboards market a low-profile, sturdy and premium mechanical feeling keyboard. 
+#STOICKEY is a keyboard company orientated towards producing a mechanical keyboard that is low-profile, sturdy and feels premium. 
 
 #The Web store was build using:
 -> React.js
